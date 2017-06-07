@@ -16,6 +16,7 @@ import MapKit
 class ViewController: UIViewController {
     
     
+    @IBOutlet weak var coordinateLabel: UILabel!
     @IBOutlet weak var pointLabel: UILabel!
     @IBOutlet weak var lengthLabel: UILabel!
     
@@ -48,8 +49,8 @@ class ViewController: UIViewController {
         
         let earthRadius : Double = 6371.008
         
-        let lat : Double = (secondLocation.latitude - firstLocation.latitude).toRadians()
-        let long : Double = (secondLocation.longitude - firstLocation.longitude).toRadians()
+        let lat : Double = (secondLocation.latitude.toRadians() - firstLocation.latitude.toRadians())
+        let long : Double = (secondLocation.longitude.toRadians() - firstLocation.longitude.toRadians())
         
         let startLat : Double = firstLocation.latitude.toRadians()
         let endLat : Double = secondLocation.latitude.toRadians()
@@ -75,6 +76,7 @@ class ViewController: UIViewController {
                 firstLocation = locManager.location?.coordinate
             }
 
+            coordinateLabel.text = String(firstLocation.latitude) + " " + String(firstLocation.longitude)
             pointLabel.text = "Ending Point"
             time = 2
             
@@ -86,6 +88,7 @@ class ViewController: UIViewController {
                 secondLocation = locManager.location?.coordinate
             }
 
+            coordinateLabel.text  = coordinateLabel.text! + "\n" + String(secondLocation.latitude) + " " + String(secondLocation.longitude)
             lengthLabel.text = String(formulaCalculate()*100)
             time = 1
             pointLabel.text = "Starting Point"
