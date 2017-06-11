@@ -76,7 +76,6 @@ class ViewController: UIViewController {
                 firstLocation = locManager.location?.coordinate
             }
 
-            coordinateLabel.text = String(firstLocation.latitude) + " " + String(firstLocation.longitude)
             pointLabel.text = "Ending Point"
             time = 2
             
@@ -89,7 +88,7 @@ class ViewController: UIViewController {
             }
 
             coordinateLabel.text  = coordinateLabel.text! + "\n" + String(secondLocation.latitude) + " " + String(secondLocation.longitude)
-            lengthLabel.text = String(formulaCalculate()*100)
+            lengthLabel.text = String(formulaCalculate()*100) + " m"
             time = 1
             pointLabel.text = "Starting Point"
 
