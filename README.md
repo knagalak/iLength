@@ -1,6 +1,6 @@
 # iLength
 
-iLength lets you calculate the length over large distances using the Haversine formula which is an important equation used to calculate the great-circle distance in navigation.
+iLength lets you calculate large lengths using your location. The app uses the Haversine formula which is an important equation used in navigation to calculate the great-circle distance. The formula is corrected for smaller distances and displays the results in metres.
 
 <img src="https://user-images.githubusercontent.com/22761765/27013820-6177e936-4efc-11e7-8314-54dd65267b55.png" alt="Loading Screen of the App" height="568" width="320">
 Loading Screen of the App
