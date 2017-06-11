@@ -10,7 +10,8 @@ import Foundation
 
 extension Double {
     func toRadians() ->Double {
-        return self * .pi / 180.0
+        let PI : Double = 3.141592653589793
+        return self * PI / 180.0
     }
     func toDegrees() -> Double {
         return self * 180.0 / .pi
